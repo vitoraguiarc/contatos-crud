@@ -1,7 +1,4 @@
 <?php
-// define: 
-define('SRC', $_SERVER['DOCUMENT_ROOT'].'/');
-
 //função para converter um array em formato json
 function createJSON($arrayDados)
 {
