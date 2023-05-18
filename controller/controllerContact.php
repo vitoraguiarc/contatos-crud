@@ -1,13 +1,13 @@
 <?php
     function inserirContato($dadosContato)
     {
-
         if (!empty($dadosContato)) {
 
             if (!empty($dadosContato[0]['nome']) && !empty($dadosContato[0]['dataNascimento']) && !empty($dadosContato[0]['email']) 
             && !empty($dadosContato[0]['profissao']) && !empty($dadosContato[0]['telefone']) && 
-            !empty($dadosContato[0]['celular']) && !empty($dadosContato[0]['wppNotificacoes']) &&
-            !empty($dadosContato[0]['emailNotificacoes']) && !empty($dadosContato[0]['smsNotificacoes'])) {
+            !empty($dadosContato[0]['celular'])) {
+
+                
 
                 $arrayDados = array(
                     "nome"      => $dadosContato[0]['nome'],
@@ -46,7 +46,7 @@
         $dados = selectAllContatos();
 
         if (!empty($dados))
-            print_r($dados);
+            return $dados;
         else
             return false;
     }

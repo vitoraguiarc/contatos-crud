@@ -121,7 +121,7 @@ function selectAllContatos() {
     //Abre a conexão
     $conexao = conexaoMysql();
 
-    $sql = "select * from tbl_contato order by id desc";
+    $sql = "select * from tbl_contato order by id asc";
     $result = mysqli_query($conexao, $sql);
 
     if ($result)

@@ -1,19 +1,25 @@
 <?php
-//função para converter um array em formato json
-function createJSON($arrayDados)
-{
-    //validação para tratar array sem dados
-    if(!empty($arrayDados)){
-        //json_encode converte o array para json
-        //json_decode faz o inverso
 
-        //configura o padrão da conversão para formato json
+//função para converter um array em formato json
+function createJSON($arrayDados){
+
+    if($arrayDados != null){
+
+        /*Configura o padrão da conversão para o formato JSON. */
         header('Content-Type: application/json');
 
-        return json_encode($arrayDados);
+        /*Converte um array para JSON.*/
+        $jsonDados = json_encode($arrayDados);
+
+        /*json_decode(): converte um JSON para array */
+
+        return $jsonDados;
+    
     }else{
         return false;
     }
+
 }
+
 
 ?>
