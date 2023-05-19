@@ -22,7 +22,11 @@ const createContact = async (client) => {
     }
 
     const response = await fetch(url, options)
-    console.log(response.ok)
+    console.log(response.ok);
+    swal('Sucesso!', 'Contato inserido!', 'success').then(() => {
+        swal(window.location.reload(true));
+      });
+    
 }
 
 const deleteContact = async (id) => {
@@ -36,6 +40,7 @@ const deleteContact = async (id) => {
 }
 
 const updateContact = async (contact) => {
+    console.log(contact)
     const options = {
         'method': 'POST',
         'body': JSON.stringify(contact),
@@ -46,6 +51,9 @@ const updateContact = async (contact) => {
 
     const response = await fetch(`${url}/${contact.id}`, options)
     console.log ('UPDATE', response.ok)
+    swal('Sucesso!', 'Contato atualizado!', 'success').then(() => {
+        swal(window.location.reload(true));
+      });
 }
 
 

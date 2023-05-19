@@ -95,7 +95,7 @@
 
     function atualizarContato($dadosContato)
     {
-        //Recebe o id enviado pelo arrayDados
+
         $idContato = $dadosContato['id'];
 
         if (!empty($dadosContato)) {

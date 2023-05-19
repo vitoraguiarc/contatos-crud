@@ -27,18 +27,6 @@ const maskTellphone = ({target}) => {
    target.value = text
 }
 
-// const maskDate = ({target}) => {
-//     let text = target.value
-
-//     if (text.match(/^\d{2}$/) !== null) {
-//         text = text.replace + '/';
-//     } else if (text.match(/^\d{2}\/\d{2}$/) !== null) {
-//         text = text.replace + '/';
-//     }
-
-//     target.value = text
-// }
-
 const maskDate = ({target}) => {
     let text = target.value
     text=text.replace(/\D/g,"");
