@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root{
     --primary-color: #068ED0;
     --text-color: #FFF; 
@@ -193,6 +197,8 @@ footer{
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+
 
 /*MODAL*/
 

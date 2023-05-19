@@ -59,7 +59,7 @@ const fillForm = (contact) => {
     document.getElementById('cellphone').value = contact.celular
     document.getElementById('name').dataset.id = contact.id
 
-    window.location.href = "#form-contacts"
+    window.location.href = '#header'
 }
 
 globalThis.delContact = async (id) => {
